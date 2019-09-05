@@ -1,0 +1,12 @@
+server:
+  port: 9010
+
+spring:
+  application:
+    name: scd-demo
+  cloud:
+    config:
+      uri: http://localhost:9020
+      fail-fast: true
+  profiles:
+    active: dev

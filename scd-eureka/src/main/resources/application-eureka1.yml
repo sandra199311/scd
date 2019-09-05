@@ -1,0 +1,15 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: eureka1
+  client:
+    # registerWithEureka和fetchRegistry设置为false，防止自己注册自己
+    #是否将自己注册到EurrkeServer，默认为true
+    registerWithEureka: false
+    #表示是否从EurekaServer获取注册信息，默认为true，表示需要从其他server同步信息
+    fetchRegistry: false
+    serviceUrl:
+#      defaultZone: http://eureka1:8761/eureka/
+      defaultZone: http://eureka2:8762/eureka/

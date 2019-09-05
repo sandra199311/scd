@@ -1,0 +1,23 @@
+# dev开发环境的配置文件
+server:
+  port: 9021
+
+foo: foo version 1
+
+# eureka配置
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
+
+
+# feign使用okhttp3,配置类FeignAutoConfiguration
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+  hystrix:
+    enabled: true

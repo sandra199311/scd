@@ -1,0 +1,36 @@
+#server:
+#  port: 9010
+#
+#spring:
+#  application:
+#    name: scd-demo
+#  cloud:
+#    config:
+#      uri: http://localhost:9020
+#      fail-fast: true
+#  profiles:
+#    active: dev
+#
+## eureka配置
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    serviceUrl:
+#      defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
+#
+#
+## feign使用okhttp3,配置类FeignAutoConfiguration
+#feign:
+#  httpclient:
+#    enabled: false
+#  okhttp:
+#    enabled: true
+#  hystrix:
+#    enabled: true
+#
+#
+#
+#
+#
+#

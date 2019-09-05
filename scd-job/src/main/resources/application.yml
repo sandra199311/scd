@@ -1,0 +1,17 @@
+#server:
+#  port: 9005
+
+spring:
+  application:
+    name: scd-job
+
+elastic-job:
+  zookeeper:
+    serverLists: 192.168.136.10:2181
+    namespace: scd-job
+    baseSleepTimeMilliseconds: 1000
+    maxSleepTimeMilliseconds: 3000
+    maxRetries: 3
+#    sessionTimeoutMilliseconds: 3000
+#    connectionTimeoutMilliseconds: 3000
+
