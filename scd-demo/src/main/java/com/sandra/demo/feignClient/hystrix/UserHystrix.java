@@ -11,9 +11,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserHystrix implements UserFeignClient {
 
-  @Override
-  public String hi(String name) {
+    @Override
+    public String hi(final String name) {
 
-    return "error";
-  }
+        return "error";
+    }
+
 }

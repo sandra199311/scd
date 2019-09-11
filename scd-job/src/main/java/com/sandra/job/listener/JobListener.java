@@ -12,18 +12,19 @@ public class JobListener implements ElasticJobListener {
 
 //  private long beginTime = 0;
 
-  @Override
-  public void beforeJobExecuted(ShardingContexts shardingContexts) {
+    @Override
+    public void beforeJobExecuted(ShardingContexts shardingContexts) {
 //    beginTime = System.currentTimeMillis();
 
 //    logger.info("===>{} JOB BEGIN TIME: {} <===", shardingContexts.getJobName(),
 //        TimeUtil.mill2Time(beginTime));
-  }
+    }
 
-  @Override
-  public void afterJobExecuted(ShardingContexts shardingContexts) {
+    @Override
+    public void afterJobExecuted(ShardingContexts shardingContexts) {
 //    long endTime = System.currentTimeMillis();
 //    logger.info("===>{} JOB END TIME: {},TOTAL CAST: {} <===", shardingContexts.getJobName(),
 //        TimeUtil.mill2Time(endTime), endTime - beginTime);
-  }
+    }
+
 }

@@ -10,7 +10,7 @@ spring:
         native:
           search-locations: classpath:/shared
   profiles:
-      active: native #从本地文件读取配置
+    active: native #从本地文件读取配置
 
 eureka:
   instance:

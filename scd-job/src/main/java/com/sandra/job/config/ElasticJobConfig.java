@@ -12,5 +12,4 @@ import org.springframework.context.annotation.ImportResource;
 @ImportResource("classpath:spring-elasticjob.xml")
 public class ElasticJobConfig {
 
-
 }

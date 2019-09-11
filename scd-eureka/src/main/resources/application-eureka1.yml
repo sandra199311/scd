@@ -11,5 +11,5 @@ eureka:
     #表示是否从EurekaServer获取注册信息，默认为true，表示需要从其他server同步信息
     fetchRegistry: false
     serviceUrl:
-#      defaultZone: http://eureka1:8761/eureka/
+      #      defaultZone: http://eureka1:8761/eureka/
       defaultZone: http://eureka2:8762/eureka/

@@ -12,12 +12,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class FeignService {
 
-  @Autowired
-  UserFeignClient userFeignClient;
+    @Autowired
+    UserFeignClient userFeignClient;
 
-  public String hi(String name) {
+    public String hi(final String name) {
 
-    return userFeignClient.hi(name);
-  }
+        return this.userFeignClient.hi(name);
+    }
 
 }

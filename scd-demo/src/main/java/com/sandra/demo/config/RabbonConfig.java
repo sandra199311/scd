@@ -13,14 +13,14 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class RabbonConfig {
 
-  /**
-   * Rabbon与远程调用类RestTemplate结合，进行负载均衡
-   */
-  @Bean
-  @LoadBalanced
-  RestTemplate restTemplate() {
+    /**
+     * Rabbon与远程调用类RestTemplate结合，进行负载均衡
+     */
+    @Bean
+    @LoadBalanced
+    RestTemplate restTemplate() {
 
-    return new RestTemplate();
-  }
+        return new RestTemplate();
+    }
 
 }

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "scd-user", configuration = FeignConfig.class, fallback = UserHystrix.class)
 public interface UserFeignClient {
 
-  @GetMapping(value = "/hi")
-  String hi(@RequestParam("name") String name);
+    @GetMapping(value = "/hi")
+    String hi(@RequestParam("name") String name);
+
 }

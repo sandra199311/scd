@@ -13,14 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HiController {
 
-  @Value("${server.port}")
-  String port;
+    @Value("${server.port}")
+    String port;
 
-  @GetMapping("/hi")
-  public String hi(@RequestParam String name) {
+    @GetMapping("/hi")
+    public String hi(@RequestParam final String name) {
 
-
-    return "hi " + name + ",i am from port:" + port;
-  }
+        return "hi " + name + ",i am from port:" + this.port;
+    }
 
 }

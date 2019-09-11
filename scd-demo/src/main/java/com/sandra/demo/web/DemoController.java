@@ -17,31 +17,31 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
 
-  @Autowired
-  RibbonService ribbonService;
+    @Autowired
+    RibbonService ribbonService;
 
-  @Autowired
-  FeignService feignService;
+    @Autowired
+    FeignService feignService;
 
-  @Value("${foo}")
-  String foo;
+    @Value("${foo}")
+    String foo;
 
-  @GetMapping("/hi")
-  public String hi(@RequestParam String name) {
+    @GetMapping("/hi")
+    public String hi(@RequestParam final String name) {
 
-    return ribbonService.hi(name);
-  }
+        return this.ribbonService.hi(name);
+    }
 
-  @GetMapping("/hi1")
-  public String hi1(@RequestParam String name) {
+    @GetMapping("/hi1")
+    public String hi1(@RequestParam final String name) {
 
-    return feignService.hi(name);
-  }
+        return this.feignService.hi(name);
+    }
 
-  @RequestMapping(value = "/foo")
-  public String foo() {
+    @RequestMapping(value = "/foo")
+    public String foo() {
 
-    return foo;
-  }
+        return this.foo;
+    }
 
 }

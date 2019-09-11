@@ -1,9 +1,10 @@
 package com.sandra.demo.config;
 
 import feign.Retryer;
-import java.util.concurrent.TimeUnit;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author: sandra
@@ -13,13 +14,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class FeignConfig {
 
-  /**
-   * 覆盖请求失败重试策略
-   */
-  @Bean
-  public Retryer feignRetryer() {
+    /**
+     * 覆盖请求失败重试策略
+     */
+    @Bean
+    public Retryer feignRetryer() {
 
-    // 重试间隔100ms,最大重试时间1s，重试次数5次
-    return new Retryer.Default(100, TimeUnit.SECONDS.toMillis(1L), 5);
-  }
+        // 重试间隔100ms,最大重试时间1s，重试次数5次
+        return new Retryer.Default(100, TimeUnit.SECONDS.toMillis(1L), 5);
+    }
+
 }
