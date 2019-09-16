@@ -1,0 +1,31 @@
+server:
+  port: 9030
+
+spring:
+  application:
+    name: scd-trace
+  main:
+    allow-bean-definition-overriding: true #解决报错:The bean 'characterEncodingFilter', defined in class path resource [zipkin/autoconfigure/ui/ZipkinUiAutoConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class] and overriding is disabled.
+
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: true #解决报错：IllegalArgumentException: Prometheus requires that all meters with the same name have the same set of tag keys.
+
+# eureka配置
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
+
+
+
+
+
+
+
+
+

@@ -4,6 +4,12 @@ server:
 spring:
   application:
     name: scd-gate
+  #zipkin配置
+  zipkin:
+    base-url: http://localhost:9030
+  sleuth:
+    sampler:
+      probability: 1.0
 
 eureka:
   instance:
@@ -23,13 +29,13 @@ zuul:
       serviceId: scd-demo
     baiduapi:
       path: /baidu/**
-      url: https://www.baidu.com/
+      url: https://www.baidu.com/ # 自定义服务地址
     itsa:
       path: /itsa/**
       serviceId: itsa
   prefix: /v1
 
-
+# 自定义服务负载地址
 itsa:
   ribbon:
     listOfServers: http://localhost:8080，http://localhost:8081

@@ -4,6 +4,13 @@
 spring:
   application:
     name: scd-user
+  #zipkin配置
+  zipkin:
+    base-url: http://localhost:9030
+  sleuth:
+    sampler:
+      probability: 1.0
+
 
 eureka:
   instance:

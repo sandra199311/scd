@@ -6,7 +6,10 @@ spring:
     name: scd-demo
   cloud:
     config:
-      uri: http://localhost:9020
       fail-fast: true
+      #      uri: http://localhost:9020 #使用单节点配置中心
+      discovery: #使用高可用的配置中心
+        enabled: true
+        service-id: scd-config
   profiles:
     active: dev
