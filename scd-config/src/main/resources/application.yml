@@ -1,6 +1,7 @@
 server:
-  port: 9020
+  port: 8090
 
+#从本地文件读取配置
 spring:
   application:
     name: scd-config
@@ -10,7 +11,21 @@ spring:
         native:
           search-locations: classpath:/shared
   profiles:
-    active: native #从本地文件读取配置
+    active: native
+
+#远程git仓库
+#spring:
+#  application:
+#    name: scd-config
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/sandra199311/scd
+#          search-paths:respo
+#          username:
+#          password:
+#        default-label: master
 
 eureka:
   instance:

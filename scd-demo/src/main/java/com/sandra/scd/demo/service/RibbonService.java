@@ -16,6 +16,7 @@ public class RibbonService {
     @Autowired
     RestTemplate restTemplate;
 
+    //在restTemplate和ribbon上使用熔断
     @HystrixCommand(fallbackMethod = "hiError")
     public String hi(final String name) {
 

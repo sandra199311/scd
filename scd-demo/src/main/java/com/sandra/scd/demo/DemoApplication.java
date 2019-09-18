@@ -12,6 +12,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients
 @EnableHystrix
 @EnableHystrixDashboard
+//@EnableCircuitBreaker
 public class DemoApplication {
 
     public static void main(final String[] args) {

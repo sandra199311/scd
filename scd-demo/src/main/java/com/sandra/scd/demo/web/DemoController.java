@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author: sandra
- * @Description: RibbonController
+ * @Description: DemoController
  * @Date: 2019/7/9 09:55
  **/
 @RestController
@@ -26,18 +26,19 @@ public class DemoController {
     @Value("${foo}")
     String foo;
 
-    @GetMapping("/hi")
-    public String hi(@RequestParam final String name) {
+    @GetMapping("/testRubbib/hi")
+    public String hiTestRibbon(@RequestParam final String name) {
 
         return this.ribbonService.hi(name);
     }
 
-    @GetMapping("/hi1")
-    public String hi1(@RequestParam final String name) {
+    @GetMapping("/testFeign/hi")
+    public String hiTestFeign(@RequestParam final String name) {
 
         return this.feignService.hi(name);
     }
 
+    //测试是否可从配置中心读取配置项
     @RequestMapping(value = "/foo")
     public String foo() {
 

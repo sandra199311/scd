@@ -1,22 +1,15 @@
-#server:
-#  port: 9000
+server:
+  port: 8120
 
 spring:
   application:
-    name: scd-user
-  #zipkin配置
-  zipkin:
-    base-url: http://localhost:8100
-  sleuth:
-    sampler:
-      probability: 1.0
+    name: scd-turbine
 
 management:
   endpoints:
     web:
       exposure:
         include: "*"
-
 
 eureka:
   instance:
@@ -27,3 +20,10 @@ eureka:
     serviceUrl:
       defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
 
+
+turbine:
+  app-config: scd-demo,scd-gate
+  aggregator:
+    clusterConfig: default
+  clusterNameExpression: new String("default")
+  combine-host-port: true

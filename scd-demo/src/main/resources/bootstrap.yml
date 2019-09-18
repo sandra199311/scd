@@ -13,3 +13,14 @@ spring:
         service-id: scd-config
   profiles:
     active: dev
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+#feign已集成了hystrix，但默认关闭了hystrix，需要开启
+feign:
+  hystrix:
+    enabled: true

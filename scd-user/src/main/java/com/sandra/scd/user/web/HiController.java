@@ -16,6 +16,12 @@ public class HiController {
     @Value("${server.port}")
     String port;
 
+    @GetMapping("/")
+    public String index() {
+
+        return "i am from port:" + this.port;
+    }
+
     @GetMapping("/hi")
     public String hi(@RequestParam final String name) {
 

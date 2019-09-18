@@ -11,10 +11,10 @@ import org.springframework.web.client.RestTemplate;
  * @Date: 2019/7/9 09:49
  **/
 @Configuration
-public class RabbonConfig {
+public class RibbonConfig {
 
     /**
-     * Rabbon与远程调用类RestTemplate结合，进行负载均衡
+     * Ribbon与远程调用类RestTemplate结合，进行负载均衡
      */
     @Bean
     @LoadBalanced

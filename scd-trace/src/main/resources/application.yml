@@ -1,5 +1,5 @@
 server:
-  port: 9030
+  port: 8100
 
 spring:
   application:
@@ -11,7 +11,7 @@ management:
   metrics:
     web:
       server:
-        auto-time-requests: true #解决报错：IllegalArgumentException: Prometheus requires that all meters with the same name have the same set of tag keys.
+        auto-time-requests: false #解决报错：IllegalArgumentException: Prometheus requires that all meters with the same name have the same set of tag keys.
 
 # eureka配置
 eureka:

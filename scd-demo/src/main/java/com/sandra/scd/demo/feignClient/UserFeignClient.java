@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Description: TODO
  * @Date: 2019/7/9 11:26
  **/
+//Feign示例，并在Feign上使用熔断
 @FeignClient(value = "scd-user", configuration = FeignConfig.class, fallback = UserHystrix.class)
 public interface UserFeignClient {
 
