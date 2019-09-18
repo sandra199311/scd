@@ -23,10 +23,10 @@
 | scd-config | 8090 |  | config server、eureka  client、actuator |
 | scd-trace | 8100 | zipkin：http://locallost:8100 | zipkin server、eureka  client、actuator |
 | scd-admin | 8110 | admin: http://locallost:8110 | admin server、eureka  client、actuator |
-| scd-turbine | 8120 | http://localhost:8120/turbine.stream | turbine server、eureka  client、actuator |
+| scd-turbine | 8120 | turbine stream： http://localhost:8120/turbine.stream    Hystrix Dashboard：http://localhost:9010/hystrix | turbine server、hystrix dashboard、eureka  client、actuator |
 | scd-auth | 8130 |  | auth server、eureka  client |
 | scd-user | 9001/9002 | 测试接口：http://172.20.46.181:9010/testFeign/hi?name=xx | zipkin、eureka  client、actuator |
-| scd-demo | 9010 | 测试接口：http://172.20.46.181:9010/hi?name=xx    Hystrix Dashboard：http://localhost:9010/hystrix | feign、ribbon、hystrix、eureka  client、config client、actuator、zipkin |
+| scd-demo | 9010 | 测试接口：http://172.20.46.181:9010/hi?name=xx | feign、ribbon、hystrix（不集成hystrix dashboard）、eureka  client、config client、actuator、zipkin |
 | scd-common | |  | eureka  client |
 | scd-job     | 9020 |  | eureka  client |
 
