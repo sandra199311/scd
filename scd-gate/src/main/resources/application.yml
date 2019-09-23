@@ -49,3 +49,15 @@ management:
     jmx:
       exposure:
         include: "*"
+
+security:
+  #  basic:
+  #    enabled: false
+  oauth2:
+    client:
+      clientId: client1
+      clientSecret: 123456
+      accessTokenUri: http://localhost:8130/uaa/oauth/token
+      userAuthorizationUri: http://localhost:8130/uaa/oauth/authorize
+    resource:
+      userInfoUri: http://10.139.17.10:9999/uaa/user/me

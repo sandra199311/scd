@@ -11,6 +11,7 @@ spring:
     sampler:
       probability: 1.0
 
+
 management:
   endpoints:
     web:
